@@ -13,12 +13,15 @@ class Movie extends Component {
 
     render() {
         return (
-            <Link to={`/movieDetail/${this.props.movie.id}`}>
-                <div>
-                    <img className='movieImage' src={this.props.movie.img}></img>
-                    {this.props.movie.isRented ? <button onClick={this.rentMovie}>-</button> : <button onClick={this.rentMovie}>+</button>}
-                </div>
-            </Link>
+
+            
+            this.props.movie.title.toUpperCase().includes(this.props.inputValue.toUpperCase()) ?
+            <div>
+                <Link to={`/movieDetail/${this.props.movie.id}`}><img className='movieImage' src={this.props.movie.img}></img></Link>
+                {this.props.movie.isRented ? <button onClick={this.rentMovie}>-</button> : <button onClick={this.rentMovie}>+</button>}
+            </div>
+            : null
+
         )
     }
 }
