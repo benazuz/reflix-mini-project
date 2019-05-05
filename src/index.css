@@ -6,9 +6,79 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(59, 59, 59);
+}
+
+.top{
+  background-color: darkred;
+  color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.logo{
+  position: absolute;
+  right: 10px;
+}
+
+.nav{
+  position: absolute;
+  left: 10px;
+}
+
+.users{
+  position: relative;
+  top: 15vh;
+}
+
+.userBox{
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 50px;
+  color: black;
+}
+
+.catalogContainer{
+  position: relative;
+  top: 15vh;
+  text-align: left;
+  left: 10px;
+}
+
+.budget{
+  position: absolute;
+  right: 30px;
+}
+
+.movies{
+  position: relative;
+  text-align: center;
+}
+
+.movie{
+  display: inline-block;
+  margin: 10px;
+}
+
+button{
+  margin-left: 2px;
+}
+
+.movieImage{
+  height: 100px;
+  width: 100px;
+}
+
+.rentedMovies{
+  display: inline-block
+
+}
+
+.rented{
+  margin: 15px;
+  display: inline-block;
 }
