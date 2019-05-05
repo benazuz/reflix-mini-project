@@ -9,7 +9,7 @@ class Catalog extends Component {
         return (
             <div className='catalogContainer'>
                 <input type='text' placeholder='search' value={this.props.inputValue} onChange={this.props.handleSearch}></input>
-                <span className='budget'>Budget: 100$</span>
+                <span className='budget'>{`Budget: ${this.props.budget} $`}</span>
                 <br></br>
                 <br></br>
                 <span>Rented:</span>
