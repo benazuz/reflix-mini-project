@@ -28,7 +28,7 @@ class App extends Component {
     let tempMovies = [...this.state.movies]
     let movieToBeRented = tempMovies.find(t => t.id === id) 
     movieToBeRented.isRented = !movieToBeRented.isRented
-    if(this.state.budget <=2){
+    if(this.state.budget <=2 && movieToBeRented.isRented){
       alert('Sorry!  insufficient funds :(')
     }
     else{
@@ -37,6 +37,12 @@ class App extends Component {
             movies: tempMovies,
             budget: this.state.budget - 3
         })
+      }
+      else if(this.state.budget <2 && movieToBeRented.isRented){
+        this.setState({
+          movies: tempMovies,
+          budget: this.state.budget + 3
+      })
       }
       else{
         this.setState({
